@@ -1,0 +1,19 @@
+import entite.JoueurTennis;
+import entite.Tournoi;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JoueurTennis djokovic = new JoueurTennis("Djokovic", "Novak", "Serbie", 35);
+		System.out.println(djokovic);
+		JoueurTennis nadal = new JoueurTennis("Nadal", "Rafael", "Espagne", 36);
+		System.out.println(nadal);
+
+		// -------------------------------------
+		
+		Tournoi rg = new Tournoi("Roland Garros", "terre battue");
+		System.out.println(rg);
+	}
+
+};

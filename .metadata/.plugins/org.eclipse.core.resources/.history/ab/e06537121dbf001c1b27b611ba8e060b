@@ -1,0 +1,15 @@
+package entite;
+
+public class Artiste {
+
+	//ATTRIBUTS
+	private nom;
+	private prenom;
+	private nomDeScene;
+	private age;
+	
+
+	public Artiste() {
+		
+	}
+}

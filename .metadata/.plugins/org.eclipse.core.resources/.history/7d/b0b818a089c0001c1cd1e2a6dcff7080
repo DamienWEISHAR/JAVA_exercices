@@ -1,0 +1,49 @@
+package entite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Parking {
+	//ATTRIBUTS
+	public String nom;
+	public List<Roulant> listeVehiculeAutorise;
+	
+	//CONSTRUCTEUR
+	public Parking() {
+		this.init();
+	}
+	
+	public Parking(String nom) {
+		this.setNom(nom);
+		this.init();
+	}
+
+	//METHODES
+	
+	public void init() {
+		this.listeVehiculeAutorise = new ArrayList<>();
+	}
+	
+	
+	
+	//GETTER & SETTER
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public List<Roulant> getListeVehiculeAutorise() {
+		return listeVehiculeAutorise;
+	}
+
+	public void setListeVehiculeAutorise(List<Roulant> listeVehiculeAutorise) {
+		this.listeVehiculeAutorise = listeVehiculeAutorise;
+	}
+	
+	
+	
+
+}

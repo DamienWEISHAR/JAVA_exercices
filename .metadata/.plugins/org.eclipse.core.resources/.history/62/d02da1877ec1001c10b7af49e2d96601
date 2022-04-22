@@ -1,0 +1,22 @@
+import entite.Sport;
+import entite.Type;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Sport sport = new Sport("sport");
+		sport.setNom("SPORT");
+		sport.ajouterType(Type.COLLECTIF);
+		System.out.println(sport);
+		
+		//-----------------------------------------------
+		Sport tennis = new Sport("tennis");
+		tennis.ajouterType(Type.RAQUETTE);
+		System.out.println(tennis);
+	
+		
+	}
+
+}

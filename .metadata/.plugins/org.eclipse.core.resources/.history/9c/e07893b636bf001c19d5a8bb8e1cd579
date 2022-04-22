@@ -1,0 +1,55 @@
+package entite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pokemon {
+
+	// ATTRIBUTS
+	private String nom;
+	private List<Type> type;
+
+	// CONSTRUCTEUR
+	public Pokemon() {
+		this.init();
+	}
+	
+	private void init() {
+		// TODO Auto-generated method stub
+		this.type = new ArrayList<Type>();
+	}
+	
+	public void ajouterType(Type type) {
+		this.type.add(type);
+	}
+
+	// METHODES
+
+	@Override
+	public String toString() {
+		return this.getNom();
+	}
+
+	
+	
+	// GETTER & SETTER
+	public String getNom() {
+		return this.nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public List<Type> getType() {
+		return type;
+	}
+
+	public void setType(List<Type> type) {
+		this.type = type;
+	}
+
+	
+
+		
+}

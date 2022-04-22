@@ -1,0 +1,52 @@
+package controler;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entite.Pokemon;
+
+public class Combat {
+
+	// ATTRIBUTS
+	private List<Pokemon> combattants;
+
+	// CONSTRUCTEUR
+	public Combat() {
+		this.init();
+	}
+
+	// METHODES
+	private void init() {
+		this.combattants = new ArrayList<Pokemon>();
+	}
+
+	public void ajouterCombattant(Pokemon combattant) {
+		this.combattants.add(combattant);
+	}
+
+	public void round() {
+		Pokemon plusRapide = this.whoStart();
+		System.out.println(plusRapide);
+	}
+
+	private Pokemon whoStart() {
+		Pokemon plusRapide = this.combattants.get(0);
+		for (int i = 0; i < this.combattants.size(); i++) {
+			Pokemon pokemonEnCours = this.combattants.get(i);
+			if (pokemonEnCours.getVitesse() > plusRapide.getVitesse()) {
+				plusRapide = pokemonEnCours;
+			}
+		}
+		return plusRapide;
+	}
+
+	// GETTER & SETTER
+	public List<Pokemon> getCombattants() {
+		return combattants;
+	}
+
+	public void setCombattants(List<Pokemon> combattants) {
+		this.combattants = combattants;
+	}
+
+}

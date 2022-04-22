@@ -1,0 +1,40 @@
+package entite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Tennis extends Sport {
+	
+	//ATTRIBUTS
+	protected List<TournoiTennis> listeTournois;
+	protected List<JoueurTennis> listeJoueurs;
+
+	
+	//CONSTRUCTEUR
+	public Tennis() {
+			
+	}
+	public Tennis(JoueurTennis listeJoueur) {
+		this.listeJoueurs = new ArrayList<JoueurTennis>();
+	}
+	
+	
+	
+	//GETTER & SETTER
+	public List<JoueurTennis> getListeJoueurs() {
+		return listeJoueurs;
+	}
+	public void setListeJoueurs(List<JoueurTennis> listeJoueurs) {
+		this.listeJoueurs = listeJoueurs;
+	}
+	public List<TournoiTennis> getListeTournois() {
+		return listeTournois;
+	}
+	public void setListeTournois(List<TournoiTennis> listeTournois) {
+		this.listeTournois = listeTournois;
+	}
+	
+	
+	
+	
+}

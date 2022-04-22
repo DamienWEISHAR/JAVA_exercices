@@ -1,0 +1,44 @@
+package entite;
+
+public class Volant {
+	//ATTRIBUTS
+	private String nom;
+	private String marque;
+	private String categorie;
+	
+	//CONSTRUCTEUR
+	public Volant() {
+		
+	}
+	
+	public Volant (String nom, String marque, String categorie) {
+		this.categorie = categorie;
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getMarque() {
+		return this.marque;
+	}
+
+	public void setMarque(String marque) {
+		this.marque = marque;
+	}
+
+	public String getCategorie() {
+		return this.categorie;
+	}
+
+	public void setCategorie(String categorie) {
+		this.categorie = categorie;
+	}
+	
+	//GETTER & SETTER
+	
+}

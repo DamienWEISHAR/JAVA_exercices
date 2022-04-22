@@ -1,0 +1,24 @@
+import entite.Artiste;
+import entite.Chanson;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Artiste a1 = new Artiste();
+		a1.setNom("Lavigne");
+		a1.setPrenom("Avril");
+		a1.setNomDeScene(a1.getPrenom() + " " + a1.getNom());
+		System.out.println(a1.getNomDeScene());
+		Artiste a2 = new Artiste("Duff", "Hilary","Hilary Duff" ,34 );
+		
+		System.out.println(a2.getNomDeScene()+ " " + a2.getAge() + " ans!");
+		
+		Chanson c1 = new Chanson("Titre");
+		c1.setTitre("Titre");
+		
+		
+		
+	}
+
+}

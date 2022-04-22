@@ -1,0 +1,24 @@
+import entite.Vehicule;
+import entite.Volant;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Volant vehiculeOne = new Volant("voiture");	
+		vehiculeOne.setNom("Clio");
+		vehiculeOne.setMarque("Renault");
+		System.out.println(vehiculeOne);
+		
+		Volant vehiculeTwo = new Volant("scooter");
+		System.out.println(vehiculeTwo);
+		
+		Volant avion = new Volant("avion");
+		avion.setMarque("Airbus");
+		avion.setNom("Boeing 777");
+		System.out.println(avion);
+		
+		
+		}
+
+}

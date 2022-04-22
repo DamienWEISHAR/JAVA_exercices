@@ -1,0 +1,44 @@
+package entite;
+
+public class Volant extends Vehicule {
+	//ATTRIBUTS
+	private Vehicule nom;
+	private Vehicule marque;
+	private String categorie;
+	
+	//CONSTRUCTEUR
+	public Volant() {
+		
+	}
+	
+	public Volant (String categorie) {
+		this.categorie = categorie;
+	}
+
+	public Vehicule getNom() {
+		return nom;
+	}
+
+	public void setNom(Vehicule nom) {
+		this.nom = nom;
+	}
+
+	public Vehicule getMarque() {
+		return marque;
+	}
+
+	public void setMarque(Vehicule marque) {
+		this.marque = marque;
+	}
+
+	public String getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(String categorie) {
+		this.categorie = categorie;
+	}
+	
+	//GETTER & SETTER
+	
+}

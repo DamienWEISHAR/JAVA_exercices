@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="entite.Vehicule"/>
+    <fullyQualifiedTypeName name="entite.Voiture"/>
+    <fullyQualifiedTypeName name="entite.Moto"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="entite.Volant"/>
+    <fullyQualifiedTypeName name="entite.Navigant"/>
+    <fullyQualifiedTypeName name="entite.Parking"/>
+    <fullyQualifiedTypeName name="entite.Animal"/>
+    <fullyQualifiedTypeName name="entite.Insecte"/>
+    <fullyQualifiedTypeName name="entite.Mammifere"/>
+    <fullyQualifiedTypeName name="entite.Oiseau"/>
+    <fullyQualifiedTypeName name="entite.Sport"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="entite.Type"/>
+</qualifiedTypeNameHistroy>

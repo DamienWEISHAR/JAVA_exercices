@@ -1,0 +1,15 @@
+package entite;
+
+public class Artiste {
+
+	//ATTRIBUTS
+	private String nom;
+	private String prenom;
+	private String omDeScene;
+	private int age;
+	
+
+	public Artiste(String, String, int) {
+		
+	}
+}

@@ -1,0 +1,23 @@
+package entite;
+
+public class Chanson {
+	
+	//ATTRIBUTS
+	private String titre;
+	
+	
+	//CONSTRUCTEUR
+	public Chanson(String titre) {
+		this.titre = titre;
+	}
+	
+	//GETTER & SETTER 
+	public String getTitre() {
+		return titre;
+	}
+
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+}

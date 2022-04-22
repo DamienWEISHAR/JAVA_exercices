@@ -1,0 +1,22 @@
+package entite;
+
+public class Moto extends Roulant {
+	
+	//ATTRIBUTS
+	private int nombreDeRoues;
+	
+	//CONSTRUCTEUR
+	public Moto () {
+		
+	}
+	
+	// GETTER & SETTER
+		public int getNombreDeRoues() {
+			return nombreDeRoues;
+		}
+
+		public void setNombreDeRoues(int nombreDeRoues) {
+			this.nombreDeRoues = nombreDeRoues;
+		}
+
+}

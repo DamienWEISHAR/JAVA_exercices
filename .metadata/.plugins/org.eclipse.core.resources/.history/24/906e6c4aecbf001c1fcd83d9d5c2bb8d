@@ -1,0 +1,40 @@
+package entite;
+
+public abstract class Roulant extends Vehicule {
+
+	// ATTRIBUTS
+	protected int nombreDeRoues;
+	protected String typeDeCarburant;
+	protected int vitesseMax;
+
+	// CONSTRUCTEUR
+	public Roulant() {
+
+	}
+
+	// GETTER & SETTER
+	public int getNombreDeRoues() {
+		return nombreDeRoues;
+	}
+
+	public void setNombreDeRoues(int nombreDeRoues) {
+		this.nombreDeRoues = nombreDeRoues;
+	}
+
+	public String getTypeDeCarburant() {
+		return typeDeCarburant;
+	}
+
+	public void setTypeDeCarburant(String typeDeCarburant) {
+		this.typeDeCarburant = typeDeCarburant;
+	}
+
+	public int getVitesseMax() {
+		return vitesseMax;
+	}
+
+	public void setVitesseMax(int vitesseMax) {
+		this.vitesseMax = vitesseMax;
+	}
+
+}

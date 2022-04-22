@@ -1,0 +1,30 @@
+
+import entite.Moto;
+import entite.Voiture;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Voiture voiture = new Voiture(4);	
+		voiture.setNom("Clio");
+		voiture.setMarque("Renault");
+		voiture.setTypeDeCarburant("diesel");
+		voiture.setVitesseMax(250);
+		System.out.println(voiture);
+		
+		Moto moto = new Moto(2);
+		moto.setMarque("MBK");
+		moto.setTypeDeCarburant("essence");
+		moto.setNom("Booster");
+		moto.setVitesseMax(180);		
+		System.out.println(moto);
+		
+		voiture.demarrer();
+		
+		System.out.println("La " + voiture.getNom()+ " fait ");
+		
+		}
+
+}

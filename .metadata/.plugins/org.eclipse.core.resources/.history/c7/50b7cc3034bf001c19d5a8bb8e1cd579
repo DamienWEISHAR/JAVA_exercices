@@ -1,0 +1,27 @@
+package entite;
+
+public class Pokemon {
+
+	//ATTRIBUTS
+	private String nom;
+	
+
+	
+	//CONSTRUCTEUR
+	public Pokemon() {
+		
+	}
+	
+	// GETTER & SETTER 
+	public String getNom() {
+		return this.nom;
+	}
+	
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	
+	
+	
+	//METHODES
+}

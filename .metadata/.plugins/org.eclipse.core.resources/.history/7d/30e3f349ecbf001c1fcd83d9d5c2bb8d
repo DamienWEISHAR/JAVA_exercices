@@ -1,0 +1,7 @@
+package entite;
+
+public class Voiture extends Roulant {
+	
+	//ATTRIBUTS
+	
+}

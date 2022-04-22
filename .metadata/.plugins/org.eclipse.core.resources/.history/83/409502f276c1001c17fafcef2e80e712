@@ -1,0 +1,28 @@
+package entite;
+
+public  class Sport {
+	//ATTRIBUTS
+	private String nom;
+	
+	//CONSTRUCTEUR
+	public Sport() {
+		
+	}
+	public Sport(String nom) {
+		
+	}
+	
+	//METHODES
+	
+	
+	//GETTER & SETTER
+	public String getNom() {	
+		return this.nom;
+	}
+	
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	
+	
+}

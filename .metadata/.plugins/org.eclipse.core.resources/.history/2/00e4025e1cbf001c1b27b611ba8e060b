@@ -1,0 +1,7 @@
+
+public class Artiste {
+
+	public Artiste() {
+		
+	}
+}

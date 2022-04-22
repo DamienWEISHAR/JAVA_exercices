@@ -1,0 +1,33 @@
+package controler;
+
+import java.util.List;
+
+import entite.Pokemon;
+
+public class Combat {
+
+	// ATTRIBUTS
+	private List<Pokemon> combattants;
+
+	// CONSTRUCTEUR
+	public Combat() {
+		this.init();
+	}
+	
+	
+	//METHODES
+	private void init() {
+		
+	}
+	
+
+	// GETTER & SETTER
+	public List<Pokemon> getCombattants() {
+		return combattants;
+	}
+
+	public void setCombattants(List<Pokemon> combattants) {
+		this.combattants = combattants;
+	}
+
+}

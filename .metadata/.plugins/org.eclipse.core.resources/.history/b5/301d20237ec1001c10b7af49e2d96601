@@ -1,0 +1,12 @@
+package entite;
+
+import java.util.List;
+
+public class Tennis extends Sport {
+	
+	//ATTRIBUTS
+	private List<TournoiTennis> listeTournois;
+	private List<JoueurTennis> listeJoueurs;
+	
+	
+}

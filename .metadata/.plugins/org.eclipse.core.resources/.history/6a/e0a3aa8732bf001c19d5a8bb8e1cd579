@@ -1,0 +1,30 @@
+package entite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pokedex {
+
+	// ATTRIBUTS
+	private List<Pokedex> listeDesPokemon;
+
+	// CONSTRUCTEUR
+	public Pokedex() {
+		this.init();
+	}
+
+	// GETTER & SETTER
+	public List<Pokedex> getListeDesPokemon() {
+		return listeDesPokemon;
+	}
+
+	public void setListeDesPokemon(List<Pokedex> listeDesPokemon) {
+		this.listeDesPokemon = listeDesPokemon;
+	}
+
+	
+	//METHODES
+	private void init() {
+		this.listeDesPokemon = new ArrayList<>(); //permet d'initialiser (ouvrir le pokédex) en créant un nouvel objet de type ArrayList
+	}
+}

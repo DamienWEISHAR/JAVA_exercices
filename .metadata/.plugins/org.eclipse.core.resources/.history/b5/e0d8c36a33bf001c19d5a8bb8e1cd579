@@ -1,0 +1,20 @@
+import entite.Pokemon;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pokemon bulbizarre = new Pokemon();
+		bulbizarre.setNom("Bulbizarre");
+		System.out.println(bulbizarre.getNom());
+		Pokemon salameche = new Pokemon();
+		salameche.setNom("Salamèche");
+		System.out.println(salameche.getNom());
+		Pokemon carapuce = new Pokemon();
+		carapuce.setNom("Carapuce");
+		System.out.println(carapuce.getNom());
+		
+		
+	}
+
+}

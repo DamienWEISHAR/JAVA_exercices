@@ -1,0 +1,50 @@
+package entite;
+
+public class Chanson {
+	
+	//ATTRIBUTS
+	private String titre;
+	private Artiste chanteur;
+	private Artiste auteur;
+	
+	
+	//CONSTRUCTEUR
+	public Chanson(String titre) {
+		this.titre = titre;
+	}
+	
+	//GETTER & SETTER 
+	public String getTitre() {
+		return titre;
+	}
+
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+	
+
+	public Artiste getChanteur() {
+		return chanteur;
+	}
+
+	public void setChanteur(Artiste chanteur) {
+		this.chanteur = chanteur;
+	}
+
+	public Artiste getAuteur() {
+		return auteur;
+	}
+
+	public void setAuteur(Artiste auteur) {
+		this.auteur = auteur;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.getTitre();
+	}
+	
+	
+}

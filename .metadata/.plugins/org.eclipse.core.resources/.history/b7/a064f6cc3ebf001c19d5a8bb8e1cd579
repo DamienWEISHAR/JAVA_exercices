@@ -1,0 +1,76 @@
+package controler;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entite.Pokemon;
+
+public class Combat {
+
+	// ATTRIBUTS
+	private List<Pokemon> combattants;
+
+	// CONSTRUCTEUR
+	public Combat() {
+		this.init();
+	}
+
+	// METHODES
+	private void init() {
+		this.combattants = new ArrayList<Pokemon>();
+	}
+
+	public void ajouterCombattant(Pokemon combattant) {
+		this.combattants.add(combattant);
+	}
+
+	public void round() {
+		Pokemon plusRapide = this.whoStart();
+		System.out.println(plusRapide);
+		int degats = this.degatsGeneres(plusRapide);
+		System.out.println(degats);
+		
+	}
+
+	private Pokemon whoStart() {
+		Pokemon plusRapide = this.combattants.get(0);
+		for (int i = 0; i < this.combattants.size(); i++) {
+			Pokemon pokemonEnCours = this.combattants.get(i);
+			if (pokemonEnCours.getVitesse() > plusRapide.getVitesse()) {
+				plusRapide = pokemonEnCours;
+			}
+		}
+		return plusRapide;
+	}
+	private Pokemon whoReceivedDamages(Pokemon attaquant) {
+		int indexAttaquant = this.combattants.indexOf(attaquant);
+		if(indexAttaquant == 0) {
+			return this.combattants.get(1);
+		}else {
+			return this.combattants.get(0);
+		}
+	}
+	
+	
+	
+	private int degatsGeneres(Pokemon pokemonAttaquant) {
+		int degats = (int) (Math.random()*pokemonAttaquant.getAttaque());
+		return degats;
+	}
+	
+
+	
+	
+	
+	
+	
+	// GETTER & SETTER
+	public List<Pokemon> getCombattants() {
+		return combattants;
+	}
+
+	public void setCombattants(List<Pokemon> combattants) {
+		this.combattants = combattants;
+	}
+
+}

@@ -1,0 +1,35 @@
+import java.util.Iterator;
+import java.util.List;
+
+import entite.Album;
+import entite.Artiste;
+import entite.Chanson;
+
+// import entite.*; // Tu peux importer tout le contenu du packager Entite avec cette commande
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Artiste avrilLavigne = new Artiste("Lavigne", "Avril", "Avril Lavigne", 38);
+		System.out.println(avrilLavigne);
+		
+		Album letGo = new Album("Let Go");
+		System.out.println(letGo.getTitre());
+		
+		Chanson complicated = new Chanson("Complicated");
+		letGo.ajoutChanson(complicated);
+		
+		Chanson sk8erBoi = new Chanson ("sk8er Boi");
+		letGo.ajoutChanson(sk8erBoi);
+		
+		List<Chanson> listeDesChansons = letGo.getListeDesTitres();
+		
+		for(int i = 0; i < listeDesChansons.size(); i++) {
+			System.out.println("La chanson n°" + i + 1 + " est = " + listeDesChansons.get(i));
+		}
+	
+	}
+
+
+}
