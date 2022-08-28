@@ -39,12 +39,12 @@ public class Slider implements ChangeListener{
 		//slider.setOrientation(SwingConstants.HORIZONTAL);
 		
 		label.setText("Temperature in °C = "+slider.getValue());
-		label.setFont(new Font("ComicSans MS", Font.ITALIC, 25));
+		label.setFont(new Font("Comic Sans MS", Font.ITALIC, 25));
 		
 		slider.addChangeListener(this);
-		
-		panel.add(slider);
 		panel.add(label);
+		panel.add(slider);
+		
 		frame.add(panel);
 		frame.setSize(420,420);
 		frame.setVisible(true);
