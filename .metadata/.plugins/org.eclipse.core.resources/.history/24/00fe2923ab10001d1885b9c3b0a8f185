@@ -1,0 +1,27 @@
+//import javax.swing.JOptionPane;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello " + name);
+		
+		int age = Integer.parseInt(JOptionPane.showInputDialog("Enter you age"));
+		JOptionPane.showMessageDialog(null, "Your are " +age);
+		
+		double height = Double.parseDouble(JOptionPane.showInputDialog("Enter you height, with a point, not a coma"));
+		JOptionPane.showMessageDialog(null, "Your are " +height+ "m !!");
+		*/
+		
+		double x = 3.14;
+		double y = 3.14;
+		
+		double calcul = Math.max(x,y);
+		System.out.println(calcul);
+		
+		
+	}
+
+}

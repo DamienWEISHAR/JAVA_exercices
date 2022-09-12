@@ -1,0 +1,79 @@
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import entite.Moto;
+import entite.Navigant;
+import entite.Parking;
+
+import entite.Volant;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		Voiture voiture = new Voiture(4);	
+		voiture.setNom("Clio");
+		voiture.setMarque("Renault");
+		voiture.setTypeDeCarburant("diesel");
+		voiture.setVitesseMax(250);
+		System.out.println("Le "+voiture.getNom()+" démarre et fait " +voiture.rouler()+"!");
+		//----------------------------------------------
+		Moto moto = new Moto(2);
+		moto.setMarque("MBK");
+		moto.setTypeDeCarburant("essence");
+		moto.setNom("Booster");
+		moto.setVitesseMax(180);		
+		//System.out.println(moto);
+		//----------------------------------------------
+		Volant avion = new Volant("avion");
+		avion.setNom("Boeing 777");
+		avion.setMarque("Airbus");
+		
+		System.out.println("Le "+avion.getNom()+" démarre et fait " +avion.voler()+"!");
+		//----------------------------------------------
+		Navigant bateau = new Navigant("bateau");
+		bateau.setMarque("Zodiac");
+		bateau.setNom("N-ZO");
+		
+		System.out.println("Le "+bateau.getNom()+" démarre et fait " +bateau.naviguer()+"!");
+		
+		//----------------------------------------------
+		Parking parking = new Parking("parking pour Roulant");
+		System.out.println(parking.getNom());
+		parking.ajoutRoulant(moto);
+		parking.ajoutRoulant(voiture);
+		// parking.ajoutRoulant(bateau); => ne marche pas car bateau n'est pas un Roulant
+		
+		System.out.println(parking.getListeRoulantAutorise ());
+		*/
+		
+		Map<Integer, String> ages = new HashMap<>();
+		ages.put(32, "Damien");
+		ages.put(90, "Mamie");
+		ages.put(75, "Albert");		
+		//System.out.println(ages);
+		//ages.remove(75);
+		//System.out.println(ages);
+		//System.out.println(ages.get(32));
+		ages.put(32,"Georges");
+		//System.out.println(ages);
+		int moyenne = 0;
+		for(Entry<Integer, String> element : ages.entrySet()) {
+			System.out.println("C'est "+ element.getValue() + " qui a " +element.getKey() + " ans!");
+			moyenne += element.getKey();
+		}
+		
+	
+		
+		
+		
+		
+		
+		
+		}
+	
+
+}

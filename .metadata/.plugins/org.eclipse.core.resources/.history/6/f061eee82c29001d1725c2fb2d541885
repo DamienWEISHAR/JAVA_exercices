@@ -1,0 +1,32 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class AnonymousClass extends JFrame{
+
+	JButton button1; 
+	JButton button2;
+	JButton button3;
+	//constructor
+	public AnonymousClass() {
+		button1 = new JButton("button 1");
+		button2 = new JButton("button 2");
+		button3 = new JButton("button 3");
+		
+		//customize the buttons
+		button1.setBounds(100,100,100,100);
+		button2.setBounds(100,100,100,100);
+		button3.setBounds(100,100,100,100);
+		
+		//add the buttons
+		this.add(button1);
+		this.add(button2);
+		this.add(button3);
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500,500);
+		this.setLayout(null);
+		this.setVisible(true);
+		
+		
+	}
+}

@@ -1,0 +1,62 @@
+//import javax.swing.JOptionPane;
+//import java.util.Random;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	// if statement = performs a block of code if it's condition evaluates to be true
+		
+		int age = 76;
+		
+		if(age>=75) {
+			System.out.println("Ok Boomer!");
+		}
+		else if(age>=18) {
+			System.out.println("You are an adult!");
+		}
+		else if(age>=13) {
+			System.out.println("You are a teenager!");
+		}
+		else {
+			System.out.println("You are not an adult!");
+		}
+				
+	}
+
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		Random random = new Random();
+		
+		int x = random.nextInt(1,7); // from 0 to 5 (so 6 numbers), add +1 to go to 6 
+		System.out.println(x);
+		*/
+		//------------------------------------------------------------------------------------------
+		/*
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello " + name+" let's calculate the hypotenuse");
+		
+		double a = Double.parseDouble(JOptionPane.showInputDialog("Enter side a"));
+		//JOptionPane.showMessageDialog(null, "Your are " +age);
+		
+		double b = Double.parseDouble(JOptionPane.showInputDialog("Enter side b"));
+		//JOptionPane.showMessageDialog(null, "Your are " +height+ "m !!");
+		
+		double c = Math.sqrt((a*a)+(b*b));
+		JOptionPane.showMessageDialog(null, "The answer is : " +c);
+		*/
+		//------------------------------------------------------------------------------------------
+		
+		/*
+		double x = 3.14;
+		double y = 25.8;
+		
+		double calcul = Math.floor(y);
+		System.out.println(calcul);
+		*/
+		
+
+
+}

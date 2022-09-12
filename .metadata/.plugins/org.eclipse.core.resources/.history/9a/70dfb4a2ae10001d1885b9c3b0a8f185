@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello " + name+" let's calculate the hypotenuse");
+		
+		double a = Double.parseDouble(JOptionPane.showInputDialog("Enter side a"));
+		//JOptionPane.showMessageDialog(null, "Your are " +age);
+		
+		double b = Double.parseDouble(JOptionPane.showInputDialog("Enter side b"));
+		//JOptionPane.showMessageDialog(null, "Your are " +height+ "m !!");
+		
+		double c = Math.sqrt((a*a)+(b*b));
+		JOptionPane.showMessageDialog(null, "The answer is" +c);
+		
+		/*
+		double x = 3.14;
+		double y = 25.8;
+		
+		double calcul = Math.floor(y);
+		System.out.println(calcul);
+		*/
+		
+	}
+
+}

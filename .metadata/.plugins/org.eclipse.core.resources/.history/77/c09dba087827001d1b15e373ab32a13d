@@ -1,0 +1,9 @@
+
+public class CustomException extends Exception {
+
+	//constructor
+	CustomException(String message){
+		//call the parent constructor, here it is Exception
+		super(message);
+	}
+}

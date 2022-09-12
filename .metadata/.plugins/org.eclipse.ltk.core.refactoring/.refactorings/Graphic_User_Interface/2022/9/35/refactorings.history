@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;MyGenericClass.java&apos; to &apos;Slider.java&apos;&#x0D;&#x0A;- Original project: &apos;Graphic_User_Interface&apos;&#x0D;&#x0A;- Destination element: &apos;Slider.java&apos;&#x0D;&#x0A;- Original element: &apos;png.MyGenericClass.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;{Slider.java" element1="/src&lt;png{MyGenericClass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1662118792300" units="1" version="1.0"/>
+</session>

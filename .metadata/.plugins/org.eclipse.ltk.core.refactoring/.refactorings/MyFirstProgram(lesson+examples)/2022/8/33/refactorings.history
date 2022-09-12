@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;chat.png&apos; to &apos;HowToOpenANewWindow/src&apos;&#x0D;&#x0A;- Original project: &apos;MyFirstProgram(lesson+examples)&apos;&#x0D;&#x0A;- Destination element: &apos;HowToOpenANewWindow/src&apos;&#x0D;&#x0A;- Original element: &apos;chat.png&apos;" description="Copy file" destination="=HowToOpenANewWindow/src" element1="chat.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1661100881659" units="0" version="1.0"/>
+</session>

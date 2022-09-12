@@ -1,0 +1,567 @@
+import java.io.File;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
+//import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.sound.sampled.*;
+
+//import java.util.*;
+//import java.util.ArrayList;
+import java.util.Scanner;
+//import javax.swing.JOptionPane;
+//import java.util.Random;
+
+
+public class Main {
+
+	public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+		
+		Scanner scanner =  new Scanner(System.in);
+		
+		File file = new File ("sound.wav");
+		AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+		Clip clip = AudioSystem.getClip(); //pre-load the music file
+		clip.open(audioStream);
+		
+		
+		String response = "";
+		
+		if (!response.equals("Q")) {
+			System.out.println("P = play, S = Stop, R = Reset, Q = Quit");
+			System.out.println("Your choice = ");
+			response = scanner.next();
+			response = response.toUpperCase();
+			
+			switch(response){
+			
+				case ("P") : clip.start();
+						   System.out.println("Music started");
+				break;
+				case ("S") : clip.stop();
+						   System.out.println("Music stopped");
+				break;
+				case ("R") : clip.setMicrosecondPosition(0); //for resetting to the beginning
+				   System.out.println("Music resetted");
+				break;				
+				default: System.out.println("Not a valide response!");		
+				
+			}
+			
+		}else {
+			switch(response) {
+			case ("Q") : 
+				System.out.println("You quit the music");
+				System.out.println("Do you really want to quit? Y = Yes // N = No");
+				response = scanner.next();
+				switch(response) {
+					case("Y"): clip.close();
+						scanner.close();
+					break;
+					case("N"):
+					System.out.println("P = play, S = Stop, R = Reset, Q = Quit");
+					System.out.println("Your choice = ");
+					break;
+		}
+	}
+		
+		
+		
+		
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * FILE
+		 * 
+		 
+		File file = new File ("essai.txt");
+	
+		
+		if(file.exists()) {
+			System.out.println("The file exists!");
+			System.out.println(file.getPath());
+			System.out.println(file.getAbsolutePath());
+		}else {
+			System.out.println("It doesn't exist!");
+		}
+		
+		
+		try {
+			FileWriter writer = new FileWriter("essai.txt");
+			writer.write("My name is Damien \nViolets are blue \nhi hi hi hi");
+			writer.append("essai");
+			writer.close(); // obligatoire
+			
+			
+		} 
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//**************************************************
+		try {
+			FileReader reader = new FileReader("essai.txt");
+			int data = reader.read();
+			while (data != -1) {
+				System.out.print((char)data);//cast the new value, print to read char by char
+				data = reader.read();//to keep reading the file char by char
+			}
+			reader.close(); //to close the FileReader
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		Personne Damien = new Personne("Damien", 172.5, 33, "21/05/1989", "yeux bleus");
+				
+		System.out.println(Damien);
+		
+		Damien.walk();
+		
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * OVERLOAD METHODS
+		 * 
+		 
+		String myString = "Damien"; //%s
+		char myChar = '€'; //%c
+		int myInt = 33; //%d
+		double myDouble= 5000; // %f
+		boolean myBool = true; //%b
+		
+		
+		System.out.printf("%s \n", myString);
+		System.out.printf("%c \n",myChar);
+		System.out.printf("%d \n",myInt);
+		System.out.printf("%f \n", myDouble);
+		System.out.printf("%b \n", myBool);
+		
+		//[width]
+				// minimum number of characters to be written as output
+				//System.out.printf("Hello %10s",myString);
+				
+		//[precision]
+				// sets number of digits of precision when outputting floating-point values
+				//System.out.printf("You have this much money %,f",myDouble); //ex: %02f =
+				
+		// [flags]
+				// adds an effect to output based on the flag added to format specifier
+				// - : left-justify
+				// + : output a plus ( + ) or minus ( - ) sign for a numeric value, for the (-) directly on the variable
+				// 0 : numeric values are zero-padded
+				// , : comma grouping separator if numbers > 1000
+				  
+				 
+		*/
+		//------------------------------------------------------------------------------------------
+		
+		
+		/*
+		 * 
+		 * METHODS
+		 * 
+		 * 
+		String name = "Damien";
+		int age = 33;
+		int x = 3;
+		int y = 4;
+		
+		hello(name, age);
+		System.out.println(x +"+"+ y +"="+calcul(x, y));
+		*/
+	//}	
+	/*
+	static void hello (String name,int age) {
+		System.out.println("Hello "+name+" you are "+age+" !");
+	}
+	static int calcul(int x , int y) {
+		int result = x + y ;
+		return result;
+	}
+		*/
+		
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * ARRAYLIST and ForEach loop
+		 * 
+		 * 
+		
+		ArrayList<String> fruits = new ArrayList<String>();
+		fruits.add("annanas");
+		fruits.add("banane");
+		fruits.add("citron");
+		
+		ArrayList<String> legumes = new ArrayList<String>();
+		legumes.add("artichaut");
+		legumes.add("brocoli");
+		legumes.add("choux-fleur");
+		
+		ArrayList<String> boissons = new ArrayList<String>();
+		boissons.add("Coca-cola");
+		boissons.add("Ice Tea");
+		boissons.add("Fanta");	
+		
+		ArrayList<ArrayList<String>> shopping = new ArrayList<ArrayList<String>>();
+		shopping.add(fruits);
+		shopping.add(legumes);
+		shopping.add(boissons);
+//		System.out.println(shopping);
+//		System.out.println(shopping.get(0));
+//		System.out.println(shopping.get(0).get(0));
+		
+		//FOR EACH loop:
+		for (ArrayList<String> produits : shopping) {
+			System.out.println(produits);
+			System.out.println(produits.get(0));
+		}
+		
+		String[] couleur = {"bleu","rouge","noir","vert"};
+		for (String produits : couleur) {
+			System.out.println(produits);
+		}
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		 
+		 //ARRAYLIST
+		  
+		/* 
+		ArrayList<String> food = new ArrayList<String>();
+		food.add("pizza");
+		food.add("sushi");
+		food.add("KFC");
+		food.add("MacDo");
+		food.add("B.K");
+			
+		for (String resto : food) {
+			System.out.println(resto);
+		}
+		*/
+		
+		
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * PRIMITIVE and WRAPPER CLASS
+		 * 
+		 */
+				// wrapper class = 	provides a way to use primitive data types as reference data types
+				//					reference data types contain useful methods
+				//					can be used with collections (ex.ArrayList)
+				
+				//primitive		//wrapper
+				//---------		        //-------
+				// boolean		Boolean
+				// char			Character
+				// int			Integer
+				// double		Double
+				
+				// autoboxing = the automatic conversion that the Java compiler makes between the primitive types 
+				// 				and their corresponding object wrapper classes
+				// unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive
+				/*
+				Boolean a = true;
+				Character b = '@';
+				Integer c = 123;
+				Double d = 3.14;
+				System.out.println(a);
+				System.out.println(b);
+				System.out.println(c);
+				System.out.println(d);
+				*/
+				//permit to access to some functions according to the type
+				//it is better to use primitive (easier and faster!)
+			
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * Some useful String functions 
+		 * 
+		 * 
+		String name = "Damien is about to be Damned";
+		//boolean result = name.equals("Damien");
+		//int result = name.length(); //counts all the letters / spaces / symbols without the ""
+		//char result = name.charAt(0);// find the letter at a specific index
+		//int result = name.indexOf("a"); //find the index of a specific letter
+		//boolean result = name.isEmpty(); // ask if the variable is empty (true = is empty // false = is not empty)
+		//String result = name.toUpperCase();
+		//String result = name.toLowerCase();
+		//String result = name.trim();
+		String result = name.replaceAll("Dam","JUL");
+		System.out.println(result);
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		
+		/*
+		 * 
+		 * 2D ARRAY 
+		 * 
+		 
+		
+		String[][] pokemon = new String[3][3];
+		
+		pokemon[0][0] = "Bulbizarre";
+		pokemon[0][1] = "Herbizarre";
+		pokemon[0][2] = "Florizarre";
+		pokemon[1][0] = "Carapuce";
+		pokemon[1][1] = "Carabaffe";
+		pokemon[1][2] = "Tortank";
+		pokemon[2][0] = "Salameche";
+		pokemon[2][1] = "Reptincel";
+		pokemon[2][2] = "Dracaufeu";
+		
+		for (int i = 0 ; i < pokemon.length ; i++) {
+			System.out.println();
+			for (int j = 0 ; j < pokemon[i].length ; j++) {
+				//System.out.print(pokemon[i][j]+ " "); // display in line, in rows
+				System.out.println(pokemon[i][j]); // display in paragraph, in columns
+				
+			}
+		}
+		
+		
+		//another way to create 2D array
+		
+		String[][] pokedex = {	{"Bulbizarre","Herbizarre","Florizarre"},
+								{"Carapuce","Carabaffe", "Tortank"},
+								{"Salameche","Reprincel", "Dracafeu"}	
+							};
+		
+		System.out.println(pokedex[0][0]);
+		
+		for (int i = 0 ; i < pokedex.length ; i++) {
+			System.out.println();
+			for (int j = 0 ; j < pokedex[i].length ; j++) {
+				//System.out.print(pokedex[i][j]+ " "); // display in line, in rows
+				System.out.println(pokedex[i][j]); // display in paragraph, in columns
+				
+			}
+		}
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		
+		/*
+		 * 
+		 * ARRAY (numeric)
+		 * 
+		 */
+		
+		//String[] cars = {"car 0", "car 1", "123"};
+		
+		//cars[0] = "car 3"; //replace the value at the index
+		
+		//System.out.println(cars[0]);
+		//System.out.println(cars[1]);
+		//System.out.println(cars[2]);
+		
+			//another way to create arrays
+		/*
+		String[] cars = new String[3]; // you put directly the number of values
+		cars[0]= "Renault";
+		cars[1]="Volvo";
+		cars[2]= "BMW";
+		
+		System.out.println(cars[0]);
+		
+		for(int i = 0; i < cars.length; i++) {
+			System.out.println("The car is "+cars[i]+"!");
+		}
+		*/
+		
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * FOR in FOR (nested FOR) with Scanner
+		 * 
+		 *
+		Scanner scanner = new Scanner (System.in);
+		//int rows = 3, columns = 5;
+		int rows; 
+		int columns;
+		String symbol = "";
+		
+		System.out.println("Number of rows ?");
+		rows = scanner.nextInt();
+		System.out.println("Number of columns ?");
+		columns = scanner.nextInt();
+		System.out.println("What symbol ?");
+		symbol = scanner.next();
+		
+		
+		for(int i = 1; i <= rows; i++ ) {
+			System.out.println();
+			for (int j = 1; j <= columns; j ++) {
+				System.out.print(symbol);  // to display only the symbol and not just a line with println
+			}
+		}
+		
+		*/
+		
+				
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * FOR LOOP and nested LOOP (FOR in FOR)
+		 *  
+		 * 
+		for(int i = 1; i < 6; i++){
+			System.out.println("row number ==========" +i);
+			for (int j=1; j < 6; j++) {
+				System.out.println("I have a tree" +j);
+			}
+			
+		}
+		System.out.println("There is no forest anymore :( ");
+		*/
+		
+		//------------------------------------------------------------------------------------------
+		
+		/*
+		// WHILE LOOP = execution of a block of code as long as its condition remains true
+		Scanner scanner = new Scanner (System.in);
+		
+		String name = "";
+		
+		while (name.isBlank()) {
+			System.out.println("Enter your name");
+			name = scanner.nextLine();
+		}
+		System.out.println("Hello "+name);
+		*/
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * LOGICAL OPERATORS: && (and), || (or), !(not or the opposite ONLY USE with text)
+		 * 
+		 * 
+		Scanner scanner = new Scanner(System.in); // allow to ask the user to enter a data in terminal
+		
+		System.out.println("Press q or Q to exit");
+		String response = scanner.next();
+		
+		if (response.equals("q") || response.equals("Q")) {
+			System.out.println("You quit the game");
+		}else {
+			System.out.println("You are still in the game");
+		}
+		*/
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * IF...ELSE IF... ELSE with DISPLAY INPUT and LOGICAL OPERATOR: &&
+		 * 
+		 * 
+	int temp = Integer.parseInt(JOptionPane.showInputDialog("What is the temperature ??"));
+		if(temp > 30) {
+			JOptionPane.showMessageDialog(null,"Yes, it is hot !!!");
+		}
+		else if (temp >=20 && temp <30 ) {
+			JOptionPane.showMessageDialog(null,"Yes, it is warm !!!");
+		}else{
+			JOptionPane.showMessageDialog(null,"Yes, it is cold !!!");
+		}
+		*/
+		
+		//------------------------------------------------------------------------------------------
+	
+	/*
+	 * 
+	 * SWITCH...CASE with DISPLAY INPUT 
+	 * 
+	 * 
+	 * String day = JOptionPane.showInputDialog("What day is it ?");
+	 
+	if (d == day) {
+		switch(d) {
+			case "Monday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Tuesday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Wednesday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Thursday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Friday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Saturday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+			case "Sunday" : JOptionPane.showMessageDialog(null, "It is = "+ day);
+			break;
+		}
+			
+	}else {
+		
+		JOptionPane.showMessageDialog(null, "You are wrong!");
+	*/
+				
+	
+
+		
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * TO USE RANDOM (example: a dice)
+		 * 
+		 * 
+		Random random = new Random();
+		
+		int x = random.nextInt(1,7); // from 0 to 5 (so 6 numbers), add +1 to go to 6 
+		System.out.println(x);
+		*/
+		//------------------------------------------------------------------------------------------
+		/*
+		 * 
+		 * TO DISPLAY AN INPUT TO ASK SOMETHING TO USERS
+		 * 
+		 * 
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello " + name+" let's calculate the hypotenuse");
+		
+		double a = Double.parseDouble(JOptionPane.showInputDialog("Enter side a"));
+		//JOptionPane.showMessageDialog(null, "Your are " +age);
+		
+		double b = Double.parseDouble(JOptionPane.showInputDialog("Enter side b"));
+		//JOptionPane.showMessageDialog(null, "Your are " +height+ "m !!");
+		
+		double c = Math.sqrt((a*a)+(b*b));
+		JOptionPane.showMessageDialog(null, "The answer is : " +c);
+		*/
+		//------------------------------------------------------------------------------------------
+		
+		/*
+		 * TO CALCULATE
+		 * 
+		double x = 3.14;
+		double y = 25.8;
+		
+		double calcul = Math.floor(y);
+		System.out.println(calcul);
+		*/
+		
+
+	
+
+	
+	}
+	
+}
+
