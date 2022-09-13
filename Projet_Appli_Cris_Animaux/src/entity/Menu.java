@@ -23,17 +23,17 @@ public class Menu implements ActionListener{
 		frame = new JFrame("Mes cris d'animaux");
 		
 		houseButton = new JButton("A la maison");
-		houseButton.setBounds(100,60,200,40);
+		houseButton.setBounds(100,90,200,40);
 		houseButton.setFocusable(false);
 		houseButton.addActionListener(this); //to apply the ActionListener functions on it
 		
 		farmButton = new JButton("A la ferme");
-		farmButton.setBounds(100,110,200,40);
+		farmButton.setBounds(100,140,200,40);
 		farmButton.setFocusable(false);
 		farmButton.addActionListener(this); 
 		
 		savaneButton = new JButton("A la savane");
-		savaneButton.setBounds(100,160,200,40);
+		savaneButton.setBounds(100,190,200,40);
 		savaneButton.setFocusable(false);
 		savaneButton.addActionListener(this); 
 

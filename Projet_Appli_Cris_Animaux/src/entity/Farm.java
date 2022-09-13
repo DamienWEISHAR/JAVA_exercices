@@ -39,8 +39,7 @@ public class Farm extends JFrame implements ActionListener {
 	private ImageIcon horse;
 	
 	private ImageIcon backArrow;
-	//private File catFile;
-	//private Clip catClip;
+	
 	
 	//constructor
 	public Farm() throws LineUnavailableException, UnsupportedAudioFileException, IOException  {
@@ -69,7 +68,24 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonCat
 		buttonBackArrow = new JButton(backArrow);
 		buttonBackArrow.setBounds(10, 10, 50, 50);		
-		buttonBackArrow.addActionListener(this);
+		buttonBackArrow.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\back.wav");
+				if(e.getSource()==buttonBackArrow) {
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					frame.dispose();
+					new Menu();
+				}
+			}
+			
+		});
 		//----------------------------------------
 		
 		//image for the buttonChicken
@@ -81,7 +97,14 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonCrocodile
 		buttonChicken = new JButton(chicken);
 		buttonChicken.setBounds(230, 150, 75, 75);
-		
+		buttonChicken.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\chicken.wav");
+			}
+			
+		});
 		//----------------------------------------
 		//image for the buttonCow
 		cow = new ImageIcon("src\\farm\\cow.png");
@@ -92,7 +115,15 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonCow
 		buttonCow = new JButton(cow);
 		buttonCow.setBounds(430, 105, 75, 75);
-		
+		buttonCow.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\cow.wav");
+			}
+			
+		});
+
 		//------------------------------------------
 		
 		//image for the buttonPig
@@ -104,7 +135,14 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonPig
 		buttonPig = new JButton(pig);
 		buttonPig.setBounds(460, 250, 75, 75);
-		
+		buttonPig.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\pig.wav");
+			}
+			
+		});
 		//----------------------------------------
 		
 		//image for the buttonDuck
@@ -116,7 +154,14 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonDuck
 		buttonDuck = new JButton(duck);
 		buttonDuck.setBounds(260, 275, 75, 75);
-		
+		buttonDuck.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\duck.wav");
+			}
+			
+		});
 		//----------------------------------------
 
 		//image for the buttonHorse
@@ -128,24 +173,15 @@ public class Farm extends JFrame implements ActionListener {
 		//buttonHorse
 		buttonHorse = new JButton(horse);
 		buttonHorse.setBounds(80, 210, 75, 75);
+		buttonHorse.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				playSound("src\\sound\\horse.wav");
+			}
+			
+		});
 
-		
-		//essai pour le son = raté!
-		/*
-		//cat meow sound
-		catFile = new File ("src\\sound\\cat_meow.wav");
-		AudioInputStream audioStream = AudioSystem.getAudioInputStream(catFile);
-		catClip = AudioSystem.getClip(); //pre-load the music file
-		catClip.open(audioStream);
-		*/
-		/*
-		File Clap = new File("src\\sound\\cat_meow.wav");
-		PlaySound(Clap);
-		PlaySound(Clap);
-		PlaySound(Clap);
-		PlaySound(Clap);
-		*/
 		
 		frame.add(buttonBackArrow);
 		frame.add(buttonChicken);
@@ -160,34 +196,24 @@ public class Farm extends JFrame implements ActionListener {
 		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getSource()==buttonBackArrow) {
-			frame.dispose();
-			new Menu();
-		
-		}
-	}
 	
-/*
-	static void PlaySound(File file) {
+	public void playSound(String sound) {
 		try {
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(sound).getAbsoluteFile());
 			Clip clip = AudioSystem.getClip();
-			clip.open(AudioSystem.getAudioInputStream(file));
+			clip.open(audioInputStream);
 			clip.start();
 			
-			Thread.sleep(clip.getMicrosecondLength()/1000);
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("Error with playing sound");
+			e.printStackTrace();
 		}
 	}
+
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getSource()==buttonCat) {
-			catClip.start();
-		}
+		
 	}
-*/
 }
