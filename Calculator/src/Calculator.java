@@ -141,31 +141,31 @@ public class Calculator implements ActionListener{
 			textField.setText(textField.getText().concat(String.valueOf(".")));
 		}
 		if(e.getSource()==addButton) {
-			num1 = Double.parseDouble(textField.getText());
+			num1 = Float.parseFloat(textField.getText());
 			operator = "+";
 			textField.setText("");
 			addButton.setBackground(yellow);
 		}
 		if(e.getSource()==subButton) {
-			num1 = Double.parseDouble(textField.getText());
+			num1 = Float.parseFloat(textField.getText());
 			operator = "-";
-			textField.setText(num1+operator);
+			textField.setText("");
 			subButton.setBackground(yellow);
 		}
 		if(e.getSource()==mulButton) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = "x";
-			textField.setText(num1+operator);
+			textField.setText("");
 			mulButton.setBackground(yellow);
 		}
 		if(e.getSource()==divButton) {
-			num1 = Double.parseDouble(textField.getText());
+			num1 = Float.parseFloat(textField.getText());
 			operator = "/";
-			textField.setText(num1+operator);
+			textField.setText("");
 			divButton.setBackground(yellow);
 		}
 		if(e.getSource()==equButton) {
-			num2 = Double.parseDouble(textField.getText());
+			num2 = Float.parseFloat(textField.getText());
 			
 			switch(operator) {
 			case "+": 
@@ -202,7 +202,7 @@ public class Calculator implements ActionListener{
 			
 		}
 		if(e.getSource()==negButton) {
-			double temp = Double.parseDouble(textField.getText());
+			float temp = Float.parseFloat(textField.getText());
 			temp = temp*(-1);
 			textField.setText(String.valueOf(temp));
 		}
